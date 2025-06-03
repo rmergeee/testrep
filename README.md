@@ -1,5 +1,2 @@
 # testrep
-* one 
-* two
-* three
-## Hello Odin!
+html and css
