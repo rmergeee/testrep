@@ -1,27 +1,9 @@
-console.log(23 + 97);
+let result;
 
-console.log(34 + 12 + 41 + 11 + 22 + 2);
+let a = 0;
+let b = 3;
 
-console.log((4 + 6 + 9) / 77);
+(a + b < 4) ? result = "Below" :
+    result = "Over";
 
-let a = 10;
-
-console.log(a);
-
-a = 1;
-
-console.log(a);
-
-let b = 7 * a;
-
-console.log(b);
-
-const max = 57;
-
-const actual = max - 13;
-
-const percentage = actual / max;
-
-console.log(percentage);
-
-alert("Ваше повідомлення тут!");
+alert(result);
