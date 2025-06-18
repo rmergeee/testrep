@@ -1,15 +1,9 @@
-// FizzBuzz
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+let myFavoriteCats = "My cats are called ";
 
-for (let i=1;i<=answer;i++) {
-  if ( i % 5 === 0 && i % 3 === 0 ) {
-    console.log("FizzBuzz");
-  } else if ( i % 5 === 0 ) {
-    console.log("Buzz");
-  } else if ( i % 3 === 0 ) {
-    console.log("Fizz");
-  } else {
-    console.log(i);
-  }
+for (const cat of cats) {
+  myFavoriteCats += `${cat}, `;
 }
+
+console.log(myFavoriteCats);
