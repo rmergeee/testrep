@@ -1,42 +1,34 @@
-function camelize(str) {
-  return str
-            .split("-")
-            .map( (word, index) => index == 0 ? word : word
-              .charAt(0)
-              .toUpperCase() + word.slice(1)
-            )
-            .join("");
-}
+const container = document.querySelector("#container");
 
-function filterRange(arr, a, b) {
-  return arr.filter(item => (a <= item && item <= b));
-}
+const content = document.createElement("div");
+content.classList.add("content");
+content.textContent = "This is  the glorious text-content!";
 
-function filterRangeInPlace(arr, a, b) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < a || arr[i] > b) {
-      arr.splice(i, 1);
-      i--;
-    }
-  }
-}
+container.appendChild(content);
 
-function copySorted(arr) {
-  let newArr = arr.slice();
-  return newArr.sort((a, b) => a.localeCompare(b))
-}
+const redP = document.createElement("p");
+      redP.classList.add("redP");
+const blueH3 = document.createElement("h3");
+      blueH3.classList.add("blueH3");
+const borderedDiv = document.createElement("div");
+      borderedDiv.classList.add("borderedDiv");
+const anotherH1 = document.createElement("h1");
+      anotherH1.classList.add("anotherH1");
+const someP = document.createElement("p");
+      someP.classList.add("someP");
 
-function unique(arr) {
-  let uniqueArr = [];
-  for (let str of arr) {
-    if (!uniqueArr.includes(str)) {
-      uniqueArr.push(str);
-    }
-  }
-  return uniqueArr;
-}
+redP.textContent = "Гей! Я червоний!";
+blueH3.textContent = "Я синій х3";
+anotherH1.textContent = "Я в дів";
+someP.textContent = "Я теж!";
 
-let strings = ["Привіт", "Світ", "Привіт", "Світ",
-  "Привіт", "Привіт", "Світ", "Світ", ":-O"
-];
-console.log(unique(strings));
+borderedDiv.appendChild(anotherH1);
+borderedDiv.appendChild(someP);
+
+content.appendChild(redP);
+content.appendChild(blueH3);
+content.appendChild(borderedDiv);
+
+redP.style.color = "red";
+blueH3.style.color = "blue";
+borderedDiv.style.cssText = "border: 1px solid black; background-color: pink;";
