@@ -32,3 +32,24 @@ content.appendChild(borderedDiv);
 redP.style.color = "red";
 blueH3.style.color = "blue";
 borderedDiv.style.cssText = "border: 1px solid black; background-color: pink;";
+
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", function (e) {
+  e.target.style.background = "blue";
+});
+
+
+const btn2 = document.querySelector("#btn2");
+
+btn2.addEventListener("click", () => alert("Hello World!"));
+
+const buttons = document.querySelectorAll("button");
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+})
