@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+    grid-template: 50px 50px / 50px 240px;
+    gap: 100px 10px;
+
+    >.item {
+        background-color: rgb(39, 125, 255);
+        border: 1px solid blue;
+    }
+}
